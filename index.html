@@ -1,0 +1,40 @@
+<!doctype html>
+<html ng-app="PinPin">
+<head>
+	<meta charset="UTF-8">
+	<title>PinPin</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/books.js"></script>
+</head>
+<body>
+	<div class='container'>
+		<div class='header'>
+			<ul class='nav nav-pills pull-right'>
+				<li><a href='#'>Home</a></li>
+				<li><a href='#'>My shelf</a></li> 
+			</ul>
+			<h3>我的書櫃</h3>
+		</div>
+		<div ng-controller="BookCtrl">
+			<div ng-include src="'template/shelve.html'">	
+			</div>
+		</div>
+		<div ng-view>
+			<div class="well span6">
+				<input type="text" placeholder="Name">
+				<br>
+				<input type="text" placeholder="Email Address">
+				<br>	
+				<input type="text" placeholder="Password">
+			</div>
+		</div>	
+		</div>
+		<div class='footer'>
+			<p>&copy; PinPin 2014 </p>
+		</div>
+	</div>
+</body>
+</html>
